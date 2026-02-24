@@ -1,7 +1,5 @@
 ﻿import { Clock, BarChart, Filter, X, Tag, Award, BookOpen, Cpu, Building2, User, Quote } from "lucide-react";
 import { useMemo, useState } from "react";
-import BonusSection from "../components/BonusSection";
-import CouponRequestModal from "../components/CouponRequestModal";
 
 interface Testimonio {
   texto: string;
@@ -100,22 +98,11 @@ export function Cursos() {
   const [categoriaFiltro, setCategoriaFiltro] = useState<string>("Todas");
   const [cursoSeleccionado, setCursoSeleccionado] = useState<Curso | null>(null);
 
-  const [openCouponModal, setOpenCouponModal] = useState(false);
-  const [couponProductoInteres, setCouponProductoInteres] = useState<string | undefined>(undefined);
-  const [couponHotmartUrl, setCouponHotmartUrl] = useState<string | undefined>(undefined);
-
-  const openCouponForCourse = (curso: Curso) => {
-    if (curso) {
-      setCouponProductoInteres(mapCursoToProductoInteres(curso.nombre));
-      setCouponHotmartUrl(curso.linkHotmart || "https://hotmart.com");
-    } else {
-      setCouponProductoInteres(undefined);
-      setCouponHotmartUrl(undefined);
-    }
-    setOpenCouponModal(true);
-  };
-
   const isInCompanyCourse = (curso: Curso | null) => curso?.nombre === IN_COMPANY_COURSE_NAME;
+  const openCourseHotmart = (curso: Curso) => {
+    if (!curso.linkHotmart) return;
+    window.open(curso.linkHotmart, "_blank", "noopener,noreferrer");
+  };
 
   const cursos: Curso[] = [
     {
@@ -135,7 +122,7 @@ export function Cursos() {
         "Estudiantes y egresados de todas las carreras profesionales interesados en metodologías aplicables a la administración, mejora de procesos y productividad",
         "Personas interesadas en aprender metodologías para la administración, la mejora de procesos y la productividad",
       ],
-      linkHotmart: "https://hotmart.com/producto-toc",
+      linkHotmart: "https://go.hotmart.com/U101321050U",
       imageUrl: "/images/adminemp.png",
 
       nombrePrograma: "Programa de Desarrollo de Competencias Profesionales",
@@ -221,7 +208,7 @@ export function Cursos() {
         "Personas que nunca han administrado proyectos formalmente",
         "Personas sin conocimientos previos",
       ],
-      linkHotmart: "https://hotmart.com",
+      linkHotmart: "https://go.hotmart.com/U102802807K",
       imageUrl: "/images/adminpro.png",
 
       nombrePrograma: "Programa de Desarrollo de Competencias Profesionales",
@@ -309,7 +296,7 @@ export function Cursos() {
         "Profesionistas que toman decisiones operativas, tácticas y estratégicas en una empresa",
         "Personas que buscan un método práctico basado en datos para tomar mejores decisiones en menos tiempo",
       ],
-      linkHotmart: "https://hotmart.com",
+      linkHotmart: "https://go.hotmart.com/N102802740M",
       imageUrl: "/images/decisiones.png",
 
       nombrePrograma: "Programa de Desarrollo de Competencias Profesionales",
@@ -399,7 +386,7 @@ export function Cursos() {
         "Profesionales que buscan aumentar su impacto profesional en cualquier organización",
         "Personas interesadas en influir positivamente, colaborar y administrar su tiempo dentro de su organización",
       ],
-      linkHotmart: "https://hotmart.com",
+      linkHotmart: "https://go.hotmart.com/A102895472F",
       imageUrl: "/images/lider.png",
 
       nombrePrograma: "Programa Avanzado de Competencias Profesionales",
@@ -491,7 +478,7 @@ export function Cursos() {
         "Personas que buscan desarrollar una competencia central para ocupar posiciones directivas",
         "Profesionistas que desean analizar información, evaluar riesgos, cuestionar supuestos, identificar sesgos y llegar a conclusiones bien fundamentadas",
       ],
-      linkHotmart: "https://hotmart.com",
+      linkHotmart: "https://go.hotmart.com/Q102895121D",
       imageUrl: "/images/pensamiento.png",
 
       nombrePrograma: "Programa de Desarrollo de Competencias Profesionales",
@@ -578,7 +565,7 @@ export function Cursos() {
         "Organizaciones que enfrentan problemas operativos, de calidad, productividad, tiempos o costos",
         "Personas que buscan dejar de resolver problemas mediante intuición o acciones aisladas",
       ],
-      linkHotmart: "https://hotmart.com",
+      linkHotmart: "https://go.hotmart.com/W102889651F",
       imageUrl: "/images/anaysol.png",
 
       nombrePrograma: "Programa de Desarrollo de Competencias Profesionales",
@@ -652,7 +639,7 @@ export function Cursos() {
     {
       id: 7,
       nombre: IN_COMPANY_COURSE_NAME,
-      descripcion: "SOLICITAR INFORMACION A DETALLE Y COTIZACION A NUESTROS MEDIOS DE CONTACTO",
+      descripcion: "SOLICITAR INFORMACIÓN A DETALLE Y COTIZACIÓN A NUESTROS MEDIOS DE CONTACTO",
       duracion: "A ser determinado junto con la empresa",
       categoria: "In Company",
       precio: "",
@@ -868,7 +855,7 @@ export function Cursos() {
                       </button>
                     ) : (
                       <button
-                        onClick={() => openCouponForCourse(curso)}
+                        onClick={() => openCourseHotmart(curso)}
                         className="w-full inline-flex items-center justify-center gap-2 bg-gradient-to-r from-[#1e3a8a] to-[#3b82f6] text-white py-2.5 rounded-lg hover:shadow-lg transition-all"
                       >
                         <span>Lo quiero ahora</span>
@@ -980,7 +967,7 @@ export function Cursos() {
 
               {/* A quién está dirigido */}
               <div>
-                <SectionTitle icon={<User size={20} />} title="¿A quién está dirigido" />
+                <SectionTitle icon={<User size={20} />} title="¿A quién está dirigido?" />
                 <BulletList items={cursoSeleccionado.dirigidoA} />
               </div>
 
@@ -1059,7 +1046,7 @@ export function Cursos() {
                       onClick={() => {
                         const curso = cursoSeleccionado;
                         setCursoSeleccionado(null);
-                        openCouponForCourse(curso);
+                        openCourseHotmart(curso);
                       }}
                       className="inline-flex items-center gap-2 bg-yellow-400 text-[#1e3a8a] px-8 py-3 rounded-lg hover:bg-yellow-300 transition-all whitespace-nowrap font-semibold"
                     >
@@ -1078,20 +1065,4 @@ export function Cursos() {
   );
 }
 
-/**
- * Mapea el nombre del curso a una opción existente del select en CouponRequestModal
- */
-function mapCursoToProductoInteres(nombreCurso: string): string {
-  const map: Record<string, string> = {
-    "Administración de Empresas de Manufactura con Enfoque TOC": "Curso Admin. Empresas de Manufactura con Enfoque TOC",
-    "Administración de Proyectos con el Enfoque de Cadena Crítica (CCPM)":
-      "Curso Admin. de Proyectos con el Enfoque de Cadena Crítica",
-    "Análisis y Solución de Problemas": "Curso Análisis y Solución de Problemas",
-    "Liderazgo, Trabajo en Equipo y Administración del Tiempo": "Curso Liderazgo, Trabajo en Equipo y Administración del Tiempo",
-    "Pensamiento Crítico": "Curso Pensamiento Crítico",
-    "Sistemas de Soporte para la Toma de Decisiones": "Curso Sistemas de Soporte para la Toma de Decisiones",
-  };
-
-  return map[nombreCurso] || "Programa de desarrollo de competencias profesionales";
-}
 

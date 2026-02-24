@@ -235,10 +235,6 @@ export function Programas() {
                         {programa.precio}
                       </span>
                     </div>
-                    <p className="text-xs text-gray-600 mt-1">
-                      💰 Precio con descuento por tiempo limitado
-                    </p>
-
                     <div className="mt-4 space-y-2">
                         <button
                         onClick={() => setProgramaSeleccionado(programa)}

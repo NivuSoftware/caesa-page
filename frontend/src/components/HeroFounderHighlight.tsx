@@ -1,4 +1,4 @@
-// src/components/HeroFounderHighlight.tsx
+﻿// src/components/HeroFounderHighlight.tsx
 import { ArrowRight } from "lucide-react";
 
 interface HeroFounderHighlightProps {

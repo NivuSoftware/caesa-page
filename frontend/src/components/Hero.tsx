@@ -34,7 +34,7 @@ export default function Hero() {
             >
               El problema no es la falta de recursos.
               <span className="block mt-2 text-[#1d4ed8]">
-                Es no gestionar correctamente la restriccion del sistema.
+                Es no gestionar correctamente la restricción del sistema.
               </span>
             </motion.h1>
 
@@ -45,8 +45,8 @@ export default function Hero() {
               transition={{ duration: 0.6, delay: 0.12 }}
               className="mt-6 max-w-[56%] sm:max-w-2xl text-base sm:text-lg leading-relaxed text-gray-600 font-medium"
             >
-              Invito a Gerentes, Ingenieros y Responsables de Operacion a una
-              Master Class ejecutiva sobre aplicacion practica de Teoria de Restricciones.
+              Invito a Gerentes, Ingenieros y Responsables de Operación a una
+              Master Class ejecutiva sobre aplicación práctica de Teoría de Restricciones.
             </motion.p>
           </div>
         </div>
