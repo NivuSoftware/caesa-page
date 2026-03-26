@@ -132,13 +132,13 @@ export function Navbar({ currentPage, onNavigate }: NavbarProps) {
           <div className="mx-auto flex max-w-7xl flex-col gap-2 px-4 py-2 sm:px-6 sm:py-3 lg:flex-row lg:items-center lg:justify-between lg:px-8">
             <div className="text-center lg:text-left">
               <p className="text-[10px] font-black uppercase tracking-[0.18em] text-orange-100 sm:text-xs">
-                Masterclass exclusiva | 6, 7 y 8 de abril
+                Masterclass exclusiva | 6, 7 y 8 de abril | 18 HRS (CDMX)
               </p>
               <p className="mt-1 text-base font-black leading-tight text-white sm:text-base">
-                Regístrate hoy
+                Regístrate hoy y asegura tu lugar.
               </p>
               <p className="hidden sm:block mt-1 text-sm font-black text-white sm:text-base">
-                Cupos limitados. Regístrate hoy y asegura tu lugar.
+                Cupos limitados. Evento sin costo
               </p>
             </div>
 

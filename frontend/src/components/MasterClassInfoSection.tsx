@@ -55,7 +55,7 @@ export default function MasterClassInfoSection() {
                       Fecha Confirmada
                     </p>
                     <p className="mt-1 text-sm font-bold uppercase tracking-[0.22em] text-white/85 sm:text-base">
-                      Abril 2026
+                      Abril 2026 | 18 HRS (CDMX)
                     </p>
                   </div>
                 </div>
@@ -63,7 +63,7 @@ export default function MasterClassInfoSection() {
                 <div className="grid grid-cols-3 gap-3">
                   <div className="rounded-2xl border border-white/20 bg-white/12 px-3 py-4 text-center shadow-[0_10px_24px_rgba(15,23,42,0.18)]">
                     <p className="text-[11px] font-extrabold uppercase tracking-[0.18em] text-cyan-100">
-                      Domingo
+                      Lunes
                     </p>
                     <p className="mt-2 text-4xl font-black leading-none text-white sm:text-5xl">6</p>
                     <p className="mt-2 text-xs font-bold uppercase tracking-[0.2em] text-white/75">
@@ -73,7 +73,7 @@ export default function MasterClassInfoSection() {
 
                   <div className="rounded-2xl border border-cyan-200/50 bg-cyan-300/15 px-3 py-4 text-center shadow-[0_10px_24px_rgba(34,211,238,0.16)]">
                     <p className="text-[11px] font-extrabold uppercase tracking-[0.18em] text-cyan-100">
-                      Lunes
+                      Martes
                     </p>
                     <p className="mt-2 text-4xl font-black leading-none text-white sm:text-5xl">7</p>
                     <p className="mt-2 text-xs font-bold uppercase tracking-[0.2em] text-white/80">
@@ -83,7 +83,7 @@ export default function MasterClassInfoSection() {
 
                   <div className="rounded-2xl border border-white/20 bg-white/12 px-3 py-4 text-center shadow-[0_10px_24px_rgba(15,23,42,0.18)]">
                     <p className="text-[11px] font-extrabold uppercase tracking-[0.18em] text-cyan-100">
-                      Martes
+                      Miercoles
                     </p>
                     <p className="mt-2 text-4xl font-black leading-none text-white sm:text-5xl">8</p>
                     <p className="mt-2 text-xs font-bold uppercase tracking-[0.2em] text-white/75">
