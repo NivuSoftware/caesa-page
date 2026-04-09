@@ -126,11 +126,13 @@ const faqs = [
 ];
 
 export function Contacto() {
+  const defaultProductoInteres = 'Programa avanzado de competencias profesionales';
+
   const [formData, setFormData] = useState({
     nombre: '',
     email: '',
     telefono: '',
-    productoInteres: 'Información programas',
+    productoInteres: defaultProductoInteres,
     mensaje: '',
     aceptaPoliticas: false
   });
@@ -184,7 +186,7 @@ export function Contacto() {
         nombre: '',
         email: '',
         telefono: '',
-        productoInteres: 'Información programas',
+        productoInteres: defaultProductoInteres,
         mensaje: '',
         aceptaPoliticas: false,
       });
@@ -305,6 +307,7 @@ export function Contacto() {
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#3b82f6] focus:border-transparent"
                   >
                     <option value="Programa avanzado de competencias profesionales">Programa avanzado de competencias profesionales</option>
+                    <option value="Programa de Teoría de Restricciones Aplicada">Programa de Teoría de Restricciones Aplicada</option>
                     <option value="Curso Admin. Empresas de Manufactura con Enfoque TOC">Curso Admin. Empresas de Manufactura con Enfoque TOC</option>
                     <option value="Curso Admin. de Proyectos con el Enfoque de Cadena Crítica">Curso Admin. de Proyectos con el Enfoque de Cadena Crítica</option>
                     <option value="Curso Análisis y Solución de Problemas">Curso Análisis y Solución de Problemas</option>

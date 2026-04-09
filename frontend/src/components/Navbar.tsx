@@ -128,32 +128,9 @@ export function Navbar({ currentPage, onNavigate }: NavbarProps) {
           )}
         </AnimatePresence>
 
-        <div className="border-t border-orange-200/30 bg-gradient-to-r from-[#f97316] via-[#fb923c] to-[#ea580c]">
-          <div className="mx-auto flex max-w-7xl flex-col gap-2 px-4 py-2 sm:px-6 sm:py-3 lg:flex-row lg:items-center lg:justify-between lg:px-8">
-            <div className="text-center lg:text-left">
-              <p className="text-[10px] font-black uppercase tracking-[0.18em] text-orange-100 sm:text-xs">
-                Masterclass exclusiva | 6, 7 y 8 de abril | 18 HRS (CDMX)
-              </p>
-              <p className="mt-1 text-base font-black leading-tight text-white sm:text-base">
-                Regístrate hoy y asegura tu lugar.
-              </p>
-              <p className="hidden sm:block mt-1 text-sm font-black text-white sm:text-base">
-                Cupos limitados. Evento sin costo
-              </p>
-            </div>
-
-            <a
-              href="https://docs.google.com/forms/d/e/1FAIpQLSdX0mZOD97vmZqPaA2DgrlIgOrynLuLP_GzjTBJenfUReiEUw/viewform?usp=send_form"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center rounded-xl bg-white px-5 py-2.5 text-sm font-extrabold text-[#0d2f6f] shadow-[0_12px_35px_rgba(255,255,255,0.2)] transition hover:-translate-y-0.5 hover:bg-slate-100 sm:px-7 sm:py-3 sm:text-base"
-            >
-              Regístrate ahora
-            </a>
-          </div>
-        </div>
+        
       </nav>
-      <div className="mt-[9rem] sm:mt-[10.5rem] lg:mt-[8.75rem]"></div>
+      <div className="mt-[3rem] sm:mt-[7rem] lg:mt-[4rem]"></div>
       {/* 
       <div className="mt-20">
         <PromoBanner />
